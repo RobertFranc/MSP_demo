@@ -13,5 +13,6 @@ torchvision
 torchsummary
 streamlit
 streamlit-webrtc
-opencv-contrib-python==4.9.0.80
-opencv-python==4.9.0.80
+#opencv-contrib-python==4.9.0.80
+#opencv-python==4.9.0.80
+opencv-contrib-python-headless==4.9.0.80
