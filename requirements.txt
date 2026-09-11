@@ -6,7 +6,8 @@ datetime
 xdg
 scikit-learn
 mediapipe
-numpy
+numpy==1.26.4
+
 torch
 pillow
 torchvision
@@ -14,4 +15,7 @@ torchsummary
 streamlit
 streamlit-webrtc
 
-opencv-contrib-python-headless==4.9.0.80
+opencv-contrib-python-headless==4.9.0.80  # (or opencv-python-headless==4.9.0.80)
+# or
+#numpy==2.2.6
+#opencv-contrib-python-headless>=4.10.0.84  # or opencv-python-headless>=4.10.0.84
