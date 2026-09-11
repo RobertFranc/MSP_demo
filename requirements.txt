@@ -15,7 +15,4 @@ torchsummary
 streamlit
 streamlit-webrtc
 
-opencv-contrib-python-headless==4.9.0.80  # (or opencv-python-headless==4.9.0.80)
-# or
-#numpy==2.2.6
-#opencv-contrib-python-headless>=4.10.0.84  # or opencv-python-headless>=4.10.0.84
+opencv-contrib-python-headless==4.9.0.80
