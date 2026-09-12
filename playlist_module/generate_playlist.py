@@ -6,6 +6,11 @@ from spotipy.oauth2 import SpotifyOAuth
 from playlist_module.params import *
 from sklearn.metrics import mean_squared_error
 
+
+# 1 import 
+import params
+
+
 def process_emotion(emotion):
     '''This function imports emotion_weights from face_detect_module and outputs
     which emotion was dominant in the video clip.'''
@@ -67,7 +72,15 @@ def generate_playlist(emotion_df, account_name):
     -title_list will be fed to UX module.'''
 
     if 'code' not in st.session_state:
-        sp_oauth = SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID,
+        # 2. Add 'params.' in front of your secret keys so Python grabs the real values
+        sp_oauth = SpotifyOAuth(
+            client_id=params.SPOTIFY_CLIENT_ID,
+            client_secret=params.SPOTIFY_SECRET,
+            redirect_uri=params.REDIRECT_URI,
+            username=params.SPOTIFY_USERNAME,
+            scope='playlist-modify-public'
+        )
+        _old_sp_oauth = SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID,
                                 client_secret=SPOTIFY_SECRET,
                                 redirect_uri=REDIRECT_URI,
                                 username=SPOTIFY_USERNAME,
