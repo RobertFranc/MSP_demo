@@ -7,8 +7,8 @@ from playlist_module.params import *
 from sklearn.metrics import mean_squared_error
 
 
-# 1 import 
-import params
+# 1 import params
+from playlist_module import params
 
 
 def process_emotion(emotion):
