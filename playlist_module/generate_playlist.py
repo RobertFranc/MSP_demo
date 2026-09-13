@@ -78,7 +78,8 @@ def generate_playlist(emotion_df, account_name):
             client_secret=params.SPOTIFY_SECRET,
             redirect_uri=params.REDIRECT_URI,
             username=params.SPOTIFY_USERNAME,
-            scope='playlist-modify-public'
+            scope='playlist-modify-public',
+            open_browser=False
         )
         _old_sp_oauth = SpotifyOAuth(client_id=SPOTIFY_CLIENT_ID,
                                 client_secret=SPOTIFY_SECRET,
