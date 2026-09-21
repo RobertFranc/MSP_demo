@@ -58,7 +58,7 @@ def gen_playlist_ui(mood_dict):
     emotion_df = tailor_df(emotion_out)
     #variable storing the created emotion dataframe;
 
-    account_name = "emo_play"
+    account_name = st.secrets['ACCOUNT_NAME'] # "emo_play"
 
     playlist = generate_playlist(emotion_df=emotion_df, account_name=account_name)
     #variable storing the generated playlist;
